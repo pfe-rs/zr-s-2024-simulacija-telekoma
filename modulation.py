@@ -17,7 +17,7 @@ class PSK(modulation):
         return symbol(symbols.real, symbols.imaginary)
 
 class QAM(modulation):
-    def map(self, bits)
+    def map(self, bits):
         modulation_order=2**self.qm
         side_length = int(np.sqrt(modulation_order))
         symbol_map = np.linspace(-1 + 1j, 1 - 1j, side_length)
