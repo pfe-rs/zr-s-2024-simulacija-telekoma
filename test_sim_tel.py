@@ -1,6 +1,7 @@
 import pytest
 import numpy as np
-from modulation import PSK, QAM, Mapper
+from modulation import PSK, QAM
+from mapper import Mapper
 
 @pytest.fixture
 def random_bits():
@@ -26,3 +27,7 @@ def test_mapper_plot_constellation(random_bits):
 
     mapper_qam = Mapper(qam_mod)
     mapper_qam.plot_constellation(random_bits)
+
+test_psk_modulation(random_bits())
+test_qam_modulation(random_bits())
+test_mapper_plot_constellation(random_bits())
