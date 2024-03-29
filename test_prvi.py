@@ -1,4 +1,4 @@
-import numpy as np
+
 from modulation import modulation, PSK, QAM
 from mapper import Mapper
 
