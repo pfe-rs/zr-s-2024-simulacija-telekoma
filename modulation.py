@@ -1,5 +1,6 @@
 import numpy as np 
 import math
+import simboli
 
 class modulation:
     def __init__(self, qm=None, bit_number=None):
@@ -10,7 +11,7 @@ class modulation:
             self.qm = qm 
             self.bit_number = 2**qm
 
-    
+    3
     def map (self):
         return 
     
