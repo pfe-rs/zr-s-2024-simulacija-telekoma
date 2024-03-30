@@ -1,6 +1,6 @@
 class Symbol:
     def __init__(self, I, Q):
-        self.I = Iq
+        self.I = I
         self.Q = Q
 
     def __repr__(self):
