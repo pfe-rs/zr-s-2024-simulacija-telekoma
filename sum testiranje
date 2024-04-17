@@ -1,0 +1,28 @@
+from gen_suma_i_desumer import NoiseGenerator
+from gen_suma_i_desumer import NoisyChannel
+from gen_suma_i_desumer import nearest_angle_to_bit
+
+
+### NG sa normalnom raspodelom
+normal_noise_generator = NoiseGenerator(distribution='normal')
+
+## NG sa uniformnom raspodelom
+uniform_noise_generator = NoiseGenerator(distribution='uniform')
+
+### Generisanje šuma 
+noise_samples = normal_noise_generator.generate(1000)
+# pretvaranje u bitove
+bits_from_noise = nearest_angle_to_bit(noise_samples)
+normal_noise_generator = NoiseGenerator(distribution='normal')
+
+# NG s uniformnom raspodelom
+uniform_noise_generator = NoiseGenerator(distribution='uniform')
+
+### Generisanje šuma 
+noise_samples = normal_noise_generator.generate(1000)
+
+# i pretvaranje u bitove
+bits_from_noise = nearest_angle_to_bit(noise_samples)
+## testiranje s printom :D
+print("Generisani šum:", noise_samples)
+print("Bitovi generisani iz šuma:", bits_from_noise)
